@@ -6,9 +6,9 @@
             "type": "shell",
             "command": "nvcc",
             "args": [
-                "${workspaceFolder}/src/main.cu", // Path to your CUDA source file
+                "${workspaceFolder}/src/main.cu", 
                 "-o",
-                "${workspaceFolder}/bin/main"   // Output binary file
+                "${workspaceFolder}/bin/main" 
             ],
             "group": {
                 "kind": "build",
