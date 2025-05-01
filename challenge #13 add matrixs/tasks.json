@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build CUDA App",
+            "type": "shell",
+            "command": "nvcc",
+            "args": [
+                "${workspaceFolder}/src/main.cu", 
+                "-o",
+                "${workspaceFolder}/bin/main" 
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
