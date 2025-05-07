@@ -1,0 +1,1 @@
+this is for wedns coding i never did a SPICE before
