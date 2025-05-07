@@ -1,0 +1,64 @@
+* 4x4 Resistive Crossbar Matrix-Vector Multiplication Example
+* Nodes: row1…row4, col1…col4, and ground (0)
+
+********************************
+* 1) Input voltages (the vector)
+********************************
+V1 row1 0 DC 0.1    ; input V1 = 0.1 V
+V2 row2 0 DC 0.2    ; input V2 = 0.2 V
+V3 row3 0 DC 0.3    ; input V3 = 0.3 V
+V4 row4 0 DC 0.4    ; input V4 = 0.4 V
+
+********************************
+* 2) Crossbar resistors (the weight matrix)
+*    Rij connects row i to col j
+********************************
+* Example weight matrix:
+*   [ R11 R12 R13 R14 ] = [10kΩ, 20kΩ, 30kΩ, 40kΩ]
+*   [ R21 ...             15kΩ, ...         ]
+*   ...
+********************************
+R11 row1 col1 10k
+R12 row1 col2 20k
+R13 row1 col3 30k
+R14 row1 col4 40k
+
+R21 row2 col1 15k
+R22 row2 col2 25k
+R23 row2 col3 35k
+R24 row2 col4 45k
+
+R31 row3 col1 12k
+R32 row3 col2 22k
+R33 row3 col3 32k
+R34 row3 col4 42k
+
+R41 row4 col1 18k
+R42 row4 col2 28k
+R43 row4 col3 38k
+R44 row4 col4 48k
+
+********************************
+* 3) Current meters on each column
+********************************
+I1 0 col1 DC 0
+I2 0 col2 DC 0
+I3 0 col3 DC 0
+I4 0 col4 DC 0
+
+********************************
+* 4) Simulation directives
+********************************
+* Operating‐point to get DC currents
+.op
+
+* Measure each column current (positive flowing into the meter)
+.meas Iout1 FIND I(I1)
+.meas Iout2 FIND I(I2)
+.meas Iout3 FIND I(I3)
+.meas Iout4 FIND I(I4)
+
+* Print results
+.print I(I1) I(I2) I(I3) I(I4)
+
+.end
