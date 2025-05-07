@@ -1,23 +1,16 @@
-* 4x4 Resistive Crossbar Matrix-Vector Multiplication Example
-* Nodes: row1…row4, col1…col4, and ground (0)
+* 4×4 Resistive Crossbar Matrix–Vector Multiplication Example
 
-********************************
-* 1) Input voltages (the vector)
-********************************
-V1 row1 0 DC 0.1    ; input V1 = 0.1 V
-V2 row2 0 DC 0.2    ; input V2 = 0.2 V
-V3 row3 0 DC 0.3    ; input V3 = 0.3 V
-V4 row4 0 DC 0.4    ; input V4 = 0.4 V
+*****************************
+* 1) Input voltage sources *
+*****************************
+V1 row1 0 DC 0.1    ; V1 = 0.1 V
+V2 row2 0 DC 0.2    ; V2 = 0.2 V
+V3 row3 0 DC 0.3    ; V3 = 0.3 V
+V4 row4 0 DC 0.4    ; V4 = 0.4 V
 
-********************************
-* 2) Crossbar resistors (the weight matrix)
-*    Rij connects row i to col j
-********************************
-* Example weight matrix:
-*   [ R11 R12 R13 R14 ] = [10kΩ, 20kΩ, 30kΩ, 40kΩ]
-*   [ R21 ...             15kΩ, ...         ]
-*   ...
-********************************
+********************************************
+* 2) Crossbar resistors (the weight matrix)*
+********************************************
 R11 row1 col1 10k
 R12 row1 col2 20k
 R13 row1 col3 30k
@@ -38,27 +31,25 @@ R42 row4 col2 28k
 R43 row4 col3 38k
 R44 row4 col4 48k
 
-********************************
-* 3) Current meters on each column
-********************************
-I1 0 col1 DC 0
-I2 0 col2 DC 0
-I3 0 col3 DC 0
-I4 0 col4 DC 0
+************************************************
+* 3) “Ammeter” zero-volt sources on each column *
+************************************************
+Vcol1 col1 0 DC 0
+Vcol2 col2 0 DC 0
+Vcol3 col3 0 DC 0
+Vcol4 col4 0 DC 0
 
 ********************************
-* 4) Simulation directives
+* 4) Operating-point & measures *
 ********************************
-* Operating‐point to get DC currents
 .op
+.meas op IOUT1 find I(Vcol1)
+.meas op IOUT2 find I(Vcol2)
+.meas op IOUT3 find I(Vcol3)
+.meas op IOUT4 find I(Vcol4)
 
-* Measure each column current (positive flowing into the meter)
-.meas Iout1 FIND I(I1)
-.meas Iout2 FIND I(I2)
-.meas Iout3 FIND I(I3)
-.meas Iout4 FIND I(I4)
-
-* Print results
-.print I(I1) I(I2) I(I3) I(I4)
+* Print the four column currents:
+.print op I(Vcol1) I(Vcol2) I(Vcol3) I(Vcol4)
 
 .end
+
