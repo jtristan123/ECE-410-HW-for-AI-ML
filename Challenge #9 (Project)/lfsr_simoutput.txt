@@ -1,0 +1,23 @@
+PS C:\Users\Skyline V2\source\repos\ECE 410 github repo\ECE-410-HW-for-AI-ML\Challenge #9 (Project)> vvp lfsr_sim
+Time  LFSR_Out
+  30ns  ace1  
+  50ns  59c3  
+  70ns  b387  
+  90ns  670f
+ 110ns  ce1e
+ 130ns  9c3c
+ 150ns  3879
+ 170ns  70f2
+ 190ns  e1e4
+ 210ns  c3c8
+ 230ns  8791
+ 250ns  0f22
+ 270ns  1e45
+ 290ns  3c8a
+ 310ns  7915
+ 330ns  f22a
+ 350ns  e455
+ 370ns  c8ab
+ 390ns  9157
+ 410ns  22ae
+.\lfsr_tb.v:31: $finish called at 410000 (1ps) 
