@@ -11,7 +11,7 @@ GENES = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
 QRSTUVWXYZ 1234567890, .-;:_!"#%&/()=?@${[]}'''
 
 # Target string to be generated 
-TARGET = "I love GeeksforGeeks"
+TARGET = "hello HW410 class!"
 
 class Individual(object): 
 	''' 

@@ -56,6 +56,7 @@ class Individual:
         child = []
         for g1, g2 in zip(self.chromosome, other.chromosome):
             prob = hw_rand() / float(2**16)
+            print(f"prob: {prob:.4f} g1: {g1} g2: {g2}")
             if prob < 0.45:
                 child.append(g1)
             elif prob < 0.90:
