@@ -1,76 +1,78 @@
-#! /usr/bin/vvp
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
 :ivl_version "12.0 (stable)";
 :ivl_delay_selection "TYPICAL";
 :vpi_time_precision - 12;
-:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
-:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
-:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
-:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
-:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
-:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
-S_0x7fffbc177490 .scope package, "$unit" "$unit" 2 1;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2009.vpi";
+S_0x12c005a90 .scope package, "$unit" "$unit" 2 1;
  .timescale -9 -12;
-S_0x7fffbc177620 .scope module, "spi_slave" "spi_slave" 3 1;
+S_0x12c00eb30 .scope module, "spi_slave3" "spi_slave3" 3 1;
  .timescale -9 -12;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /INPUT 1 "cs";
     .port_info 2 /INPUT 1 "sclk";
     .port_info 3 /INPUT 1 "mosi";
-    .port_info 4 /OUTPUT 1 "miso";
-v0x7fffbc189430_0 .var "bit_cnt", 2 0;
-o0x7f9acc800048 .functor BUFZ 1, C4<z>; HiZ drive
-v0x7fffbc1c25d0_0 .net "clk", 0 0, o0x7f9acc800048;  0 drivers
-o0x7f9acc800078 .functor BUFZ 1, C4<z>; HiZ drive
-v0x7fffbc1c2690_0 .net "cs", 0 0, o0x7f9acc800078;  0 drivers
-v0x7fffbc1c2760_0 .var "miso", 0 0;
-o0x7f9acc8000d8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x7fffbc1c2820_0 .net "mosi", 0 0, o0x7f9acc8000d8;  0 drivers
-o0x7f9acc800108 .functor BUFZ 1, C4<z>; HiZ drive
-v0x7fffbc1c2930_0 .net "sclk", 0 0, o0x7f9acc800108;  0 drivers
-v0x7fffbc1c29f0_0 .var "shift_reg", 7 0;
-E_0x7fffbc178010 .event negedge, v0x7fffbc1c2930_0;
-E_0x7fffbc177db0 .event posedge, v0x7fffbc1c2930_0;
-    .scope S_0x7fffbc177620;
+    .port_info 4 /INPUT 8 "lfsr_seed";
+    .port_info 5 /OUTPUT 1 "miso";
+v0x12c005c00_0 .var "bit_cnt", 2 0;
+o0x130040040 .functor BUFZ 1, C4<z>; HiZ drive
+v0x12c01e7f0_0 .net "clk", 0 0, o0x130040040;  0 drivers
+o0x130040070 .functor BUFZ 1, C4<z>; HiZ drive
+v0x12c01e890_0 .net "cs", 0 0, o0x130040070;  0 drivers
+v0x12c01e920_0 .var "lfsr", 7 0;
+o0x1300400d0 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x12c01e9d0_0 .net "lfsr_seed", 7 0, o0x1300400d0;  0 drivers
+v0x12c01eac0_0 .var "miso", 0 0;
+o0x130040130 .functor BUFZ 1, C4<z>; HiZ drive
+v0x12c01eb60_0 .net "mosi", 0 0, o0x130040130;  0 drivers
+o0x130040160 .functor BUFZ 1, C4<z>; HiZ drive
+v0x12c01ec00_0 .net "sclk", 0 0, o0x130040160;  0 drivers
+v0x12c01eca0_0 .var "seeded", 0 0;
+v0x12c01edb0_0 .var "tx_buffer", 7 0;
+E_0x12c007510 .event posedge, v0x12c01ec00_0;
+E_0x12c006400 .event negedge, v0x12c01ec00_0;
+    .scope S_0x12c00eb30;
 T_0 ;
-    %pushi/vec4 204, 0, 8;
-    %store/vec4 v0x7fffbc1c29f0_0, 0, 8;
     %pushi/vec4 0, 0, 3;
-    %store/vec4 v0x7fffbc189430_0, 0, 3;
+    %store/vec4 v0x12c005c00_0, 0, 3;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x12c01edb0_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12c01eca0_0, 0, 1;
     %end;
     .thread T_0, $init;
-    .scope S_0x7fffbc177620;
+    .scope S_0x12c00eb30;
 T_1 ;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x7fffbc1c2760_0, 0, 1;
+    %store/vec4 v0x12c01eac0_0, 0, 1;
     %end;
     .thread T_1;
-    .scope S_0x7fffbc177620;
+    .scope S_0x12c00eb30;
 T_2 ;
-    %wait E_0x7fffbc177db0;
-    %load/vec4 v0x7fffbc1c2690_0;
+    %wait E_0x12c007510;
+    %load/vec4 v0x12c01e890_0;
     %nor/r;
     %flag_set/vec4 8;
     %jmp/0xz  T_2.0, 8;
-    %load/vec4 v0x7fffbc1c29f0_0;
-    %parti/s 7, 0, 2;
-    %load/vec4 v0x7fffbc1c2820_0;
-    %concat/vec4; draw_concat_vec4
-    %store/vec4 v0x7fffbc1c29f0_0, 0, 8;
-    %load/vec4 v0x7fffbc189430_0;
+    %load/vec4 v0x12c005c00_0;
     %addi 1, 0, 3;
-    %assign/vec4 v0x7fffbc189430_0, 0;
+    %assign/vec4 v0x12c005c00_0, 0;
 T_2.0 ;
     %jmp T_2;
     .thread T_2;
-    .scope S_0x7fffbc177620;
+    .scope S_0x12c00eb30;
 T_3 ;
-    %wait E_0x7fffbc178010;
-    %load/vec4 v0x7fffbc1c2690_0;
+    %wait E_0x12c006400;
+    %load/vec4 v0x12c01e890_0;
     %nor/r;
     %flag_set/vec4 9;
     %flag_get/vec4 9;
     %jmp/0 T_3.2, 9;
-    %load/vec4 v0x7fffbc189430_0;
+    %load/vec4 v0x12c005c00_0;
     %pad/u 32;
     %cmpi/u 8, 0, 32;
     %flag_get/vec4 5;
@@ -78,23 +80,75 @@ T_3 ;
 T_3.2;
     %flag_set/vec4 8;
     %jmp/0xz  T_3.0, 8;
-    %load/vec4 v0x7fffbc1c29f0_0;
+    %load/vec4 v0x12c01edb0_0;
     %pushi/vec4 7, 0, 32;
-    %load/vec4 v0x7fffbc189430_0;
+    %load/vec4 v0x12c005c00_0;
     %pad/u 32;
     %sub;
     %part/u 1;
-    %assign/vec4 v0x7fffbc1c2760_0, 0;
+    %assign/vec4 v0x12c01eac0_0, 0;
     %jmp T_3.1;
 T_3.0 ;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0x7fffbc1c2760_0, 0;
+    %assign/vec4 v0x12c01eac0_0, 0;
 T_3.1 ;
     %jmp T_3;
     .thread T_3;
+    .scope S_0x12c00eb30;
+T_4 ;
+    %wait E_0x12c007510;
+    %load/vec4 v0x12c01e890_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.0, 8;
+    %load/vec4 v0x12c01eca0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.2, 8;
+    %load/vec4 v0x12c01e9d0_0;
+    %assign/vec4 v0x12c01e920_0, 0;
+    %load/vec4 v0x12c01e9d0_0;
+    %assign/vec4 v0x12c01edb0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x12c01eca0_0, 0;
+    %jmp T_4.3;
+T_4.2 ;
+    %load/vec4 v0x12c005c00_0;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_4.4, 4;
+    %load/vec4 v0x12c01e920_0;
+    %parti/s 7, 0, 2;
+    %load/vec4 v0x12c01e920_0;
+    %parti/s 1, 7, 4;
+    %load/vec4 v0x12c01e920_0;
+    %parti/s 1, 5, 4;
+    %xor;
+    %load/vec4 v0x12c01e920_0;
+    %parti/s 1, 4, 4;
+    %xor;
+    %load/vec4 v0x12c01e920_0;
+    %parti/s 1, 3, 3;
+    %xor;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0x12c01e920_0, 0;
+    %load/vec4 v0x12c01e920_0;
+    %assign/vec4 v0x12c01edb0_0, 0;
+T_4.4 ;
+T_4.3 ;
+    %load/vec4 v0x12c005c00_0;
+    %pad/u 32;
+    %cmpi/e 7, 0, 32;
+    %jmp/0xz  T_4.6, 4;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0x12c005c00_0, 0;
+T_4.6 ;
+T_4.0 ;
+    %jmp T_4;
+    .thread T_4;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";
     "<interactive>";
     "-";
-    "/home/jtristan/HW-for-AI-ML-ECE-410/Challenge_#25_SPI/spi_slave.v";
+    "/Users/airtristan/Documents/vscode/Git_repoHW410/HW_AI_ML/Challenge_#25_SPI/spi_slave3.v";
