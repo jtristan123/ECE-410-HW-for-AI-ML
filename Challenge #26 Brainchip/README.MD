@@ -1,0 +1,1 @@
+go to by wiki to read up on the wtire on the brainchip!!
