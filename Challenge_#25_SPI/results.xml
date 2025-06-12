@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1748561592" />
-    <testcase name="spi_send_receive" classname="test_spi4" file="/Users/airtristan/Documents/vscode/Git_repoHW410/HW_AI_ML/Challenge_#25_SPI/test_spi4.py" lineno="5" time="0.0007891654968261719" sim_time_ns="230.001" ratio_time="291448.37290151056" />
+    <property name="random_seed" value="1749682761" />
+    <testcase name="spi_send_receive" classname="test_spi4" file="/Users/airtristan/Documents/vscode/Git_repoHW410/HW_AI_ML/Challenge_#25_SPI/test_spi4.py" lineno="5" time="0.0024178028106689453" sim_time_ns="1070.001" ratio_time="442550.9786316931" />
   </testsuite>
 </testsuites>

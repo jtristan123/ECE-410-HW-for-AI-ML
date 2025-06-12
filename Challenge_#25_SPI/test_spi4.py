@@ -13,7 +13,7 @@ async def spi_send_receive(dut):
     dut.sclk.value = 0
     await Timer(10, units='ns')
     
-    for i in range(1):  # Read 5 values
+    for i in range(5):  # Read 5 values
         received_bits = []
         for _ in range(8):
             dut.sclk.value = 0

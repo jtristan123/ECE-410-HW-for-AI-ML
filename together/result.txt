@@ -1,0 +1,39 @@
+HW RNG used: 227
+prob: 0.8867 → chosen: gp2
+HW RNG used: 191
+prob: 0.7461 → chosen: gp2
+HW RNG used: 22
+prob: 0.0859 → chosen: gp1
+HW RNG used: 57
+prob: 0.2227 → chosen: gp1
+HW RNG used: 184
+prob: 0.7188 → chosen: gp2
+HW RNG used: 155
+prob: 0.6055 → chosen: gp2
+HW RNG used: 194
+HW RNG used: 83
+HW RNG used: 252
+prob: 0.9844 → chosen: mutate
+HW RNG used: 44
+HW RNG used: 250
+prob: 0.9766 → chosen: mutate
+HW RNG used: 84
+HW RNG used: 28
+prob: 0.1094 → chosen: gp1
+HW RNG used: 219
+prob: 0.8555 → chosen: gp2
+HW RNG used: 128
+prob: 0.5000 → chosen: gp2
+HW RNG used: 74
+prob: 0.2891 → chosen: gp1
+HW RNG used: 84
+prob: 0.3281 → chosen: gp1
+HW RNG used: 174
+prob: 0.6797 → chosen: gp2
+HW RNG used: 79
+prob: 0.3086 → chosen: gp1
+HW RNG used: 29
+prob: 0.1133 → chosen: gp1
+HW RNG used: 89
+prob: 0.3477 → chosen: gp1
+HW RNG used: 212

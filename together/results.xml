@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1749699357" />
+    <testcase name="spi_send_receive" classname="test_spi4" file="/Users/airtristan/Documents/vscode/Git_repoHW410/HW_AI_ML/together/test_spi4.py" lineno="8" time="0.5960240364074707" sim_time_ns="116030.001" ratio_time="194673.35864400663" />
+  </testsuite>
+</testsuites>
