@@ -1,0 +1,490 @@
+library (spi_slave3) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1kohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 20;
+  slew_lower_threshold_pct_fall : 20;
+  slew_upper_threshold_pct_rise : 80;
+  slew_upper_threshold_pct_fall : 80;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 100.0;
+  nom_voltage                    : 1.60;
+
+  type ("lfsr_seed") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 16;
+    bit_from : 15;
+    bit_to : 0;
+  }
+
+  cell ("spi_slave3") {
+    interface_timing : true;
+    pin("clk") {
+      direction : input;
+      clock : true;
+      capacitance : 0.0141;
+      timing() {
+        timing_sense : positive_unate;
+        timing_type : min_clock_tree_path;
+	cell_rise(scalar) {
+          values("0.31932");
+	}
+	cell_fall(scalar) {
+          values("0.31197");
+	}
+      }
+      timing() {
+        timing_sense : positive_unate;
+        timing_type : max_clock_tree_path;
+	cell_rise(scalar) {
+          values("0.31932");
+	}
+	cell_fall(scalar) {
+          values("0.31197");
+	}
+      }
+    }
+    pin("cs") {
+      direction : input;
+      capacitance : 0.0031;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.05011");
+	}
+	fall_constraint(scalar) {
+          values("0.03456");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.29394");
+	}
+	fall_constraint(scalar) {
+          values("0.15341");
+	}
+      }
+    }
+    pin("miso") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("mosi") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("sclk") {
+      direction : input;
+      capacitance : 0.0030;
+    }
+    bus("lfsr_seed") {
+      bus_type : lfsr_seed;
+      direction : input;
+      capacitance : 0.0000;
+    pin("lfsr_seed[15]") {
+      direction : input;
+      capacitance : 0.0028;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01921");
+	}
+	fall_constraint(scalar) {
+          values("-0.16552");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00403");
+	}
+	fall_constraint(scalar) {
+          values("0.22220");
+	}
+      }
+    }
+    pin("lfsr_seed[14]") {
+      direction : input;
+      capacitance : 0.0027;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.02678");
+	}
+	fall_constraint(scalar) {
+          values("-0.15855");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("-0.00353");
+	}
+	fall_constraint(scalar) {
+          values("0.21526");
+	}
+      }
+    }
+    pin("lfsr_seed[13]") {
+      direction : input;
+      capacitance : 0.0028;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.02435");
+	}
+	fall_constraint(scalar) {
+          values("-0.15963");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("-0.00110");
+	}
+	fall_constraint(scalar) {
+          values("0.21638");
+	}
+      }
+    }
+    pin("lfsr_seed[12]") {
+      direction : input;
+      capacitance : 0.0028;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.02045");
+	}
+	fall_constraint(scalar) {
+          values("-0.16193");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00281");
+	}
+	fall_constraint(scalar) {
+          values("0.21870");
+	}
+      }
+    }
+    pin("lfsr_seed[11]") {
+      direction : input;
+      capacitance : 0.0027;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.01212");
+	}
+	fall_constraint(scalar) {
+          values("-0.18114");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.03555");
+	}
+	fall_constraint(scalar) {
+          values("0.23785");
+	}
+      }
+    }
+    pin("lfsr_seed[10]") {
+      direction : input;
+      capacitance : 0.0031;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01735");
+	}
+	fall_constraint(scalar) {
+          values("-0.16481");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00591");
+	}
+	fall_constraint(scalar) {
+          values("0.22154");
+	}
+      }
+    }
+    pin("lfsr_seed[9]") {
+      direction : input;
+      capacitance : 0.0027;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01496");
+	}
+	fall_constraint(scalar) {
+          values("-0.17283");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00837");
+	}
+	fall_constraint(scalar) {
+          values("0.22949");
+	}
+      }
+    }
+    pin("lfsr_seed[8]") {
+      direction : input;
+      capacitance : 0.0027;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01708");
+	}
+	fall_constraint(scalar) {
+          values("-0.16563");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00621");
+	}
+	fall_constraint(scalar) {
+          values("0.22239");
+	}
+      }
+    }
+    pin("lfsr_seed[7]") {
+      direction : input;
+      capacitance : 0.0031;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01618");
+	}
+	fall_constraint(scalar) {
+          values("-0.16609");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00710");
+	}
+	fall_constraint(scalar) {
+          values("0.22283");
+	}
+      }
+    }
+    pin("lfsr_seed[6]") {
+      direction : input;
+      capacitance : 0.0031;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.02408");
+	}
+	fall_constraint(scalar) {
+          values("-0.16121");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("-0.00075");
+	}
+	fall_constraint(scalar) {
+          values("0.21800");
+	}
+      }
+    }
+    pin("lfsr_seed[5]") {
+      direction : input;
+      capacitance : 0.0030;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.00782");
+	}
+	fall_constraint(scalar) {
+          values("-0.18705");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.03132");
+	}
+	fall_constraint(scalar) {
+          values("0.24380");
+	}
+      }
+    }
+    pin("lfsr_seed[4]") {
+      direction : input;
+      capacitance : 0.0031;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01213");
+	}
+	fall_constraint(scalar) {
+          values("-0.16855");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.01131");
+	}
+	fall_constraint(scalar) {
+          values("0.22529");
+	}
+      }
+    }
+    pin("lfsr_seed[3]") {
+      direction : input;
+      capacitance : 0.0030;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.02141");
+	}
+	fall_constraint(scalar) {
+          values("-0.16462");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00192");
+	}
+	fall_constraint(scalar) {
+          values("0.22135");
+	}
+      }
+    }
+    pin("lfsr_seed[2]") {
+      direction : input;
+      capacitance : 0.0031;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.02267");
+	}
+	fall_constraint(scalar) {
+          values("-0.16384");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00060");
+	}
+	fall_constraint(scalar) {
+          values("0.22052");
+	}
+      }
+    }
+    pin("lfsr_seed[1]") {
+      direction : input;
+      capacitance : 0.0028;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.01978");
+	}
+	fall_constraint(scalar) {
+          values("-0.16257");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.00348");
+	}
+	fall_constraint(scalar) {
+          values("0.21932");
+	}
+      }
+    }
+    pin("lfsr_seed[0]") {
+      direction : input;
+      capacitance : 0.0027;
+      timing() {
+        related_pin : "clk";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.00553");
+	}
+	fall_constraint(scalar) {
+          values("-0.17514");
+	}
+      }
+      timing() {
+        related_pin : "clk";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("0.01791");
+	}
+	fall_constraint(scalar) {
+          values("0.23195");
+	}
+      }
+    }
+    }
+  }
+
+}

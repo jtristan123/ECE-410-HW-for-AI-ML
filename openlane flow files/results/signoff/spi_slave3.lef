@@ -1,0 +1,316 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO spi_slave3
+  CLASS BLOCK ;
+  FOREIGN spi_slave3 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 60.610 BY 71.330 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 14.170 10.640 15.770 60.080 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 26.475 10.640 28.075 60.080 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 38.780 10.640 40.380 60.080 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 51.085 10.640 52.685 60.080 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 19.500 54.980 21.100 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 31.740 54.980 33.340 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 43.980 54.980 45.580 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 56.220 54.980 57.820 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 10.870 10.640 12.470 60.080 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 23.175 10.640 24.775 60.080 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 35.480 10.640 37.080 60.080 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 47.785 10.640 49.385 60.080 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 16.200 54.980 17.800 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 28.440 54.980 30.040 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 40.680 54.980 42.280 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 52.920 54.980 54.520 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 47.640 4.000 48.240 ;
+    END
+  END clk
+  PIN cs
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 38.730 67.330 39.010 71.330 ;
+    END
+  END cs
+  PIN lfsr_seed[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 27.240 4.000 27.840 ;
+    END
+  END lfsr_seed[0]
+  PIN lfsr_seed[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 32.290 0.000 32.570 4.000 ;
+    END
+  END lfsr_seed[10]
+  PIN lfsr_seed[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 30.640 4.000 31.240 ;
+    END
+  END lfsr_seed[11]
+  PIN lfsr_seed[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 34.040 4.000 34.640 ;
+    END
+  END lfsr_seed[12]
+  PIN lfsr_seed[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 37.440 4.000 38.040 ;
+    END
+  END lfsr_seed[13]
+  PIN lfsr_seed[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 40.840 4.000 41.440 ;
+    END
+  END lfsr_seed[14]
+  PIN lfsr_seed[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 51.040 4.000 51.640 ;
+    END
+  END lfsr_seed[15]
+  PIN lfsr_seed[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 23.840 4.000 24.440 ;
+    END
+  END lfsr_seed[1]
+  PIN lfsr_seed[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 16.190 0.000 16.470 4.000 ;
+    END
+  END lfsr_seed[2]
+  PIN lfsr_seed[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 19.410 0.000 19.690 4.000 ;
+    END
+  END lfsr_seed[3]
+  PIN lfsr_seed[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 25.850 0.000 26.130 4.000 ;
+    END
+  END lfsr_seed[4]
+  PIN lfsr_seed[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 29.070 0.000 29.350 4.000 ;
+    END
+  END lfsr_seed[5]
+  PIN lfsr_seed[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 35.510 0.000 35.790 4.000 ;
+    END
+  END lfsr_seed[6]
+  PIN lfsr_seed[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 41.950 0.000 42.230 4.000 ;
+    END
+  END lfsr_seed[7]
+  PIN lfsr_seed[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 56.610 17.040 60.610 17.640 ;
+    END
+  END lfsr_seed[8]
+  PIN lfsr_seed[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 56.610 23.840 60.610 24.440 ;
+    END
+  END lfsr_seed[9]
+  PIN miso
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met3 ;
+        RECT 56.610 44.240 60.610 44.840 ;
+    END
+  END miso
+  PIN mosi
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END mosi
+  PIN sclk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 56.610 47.640 60.610 48.240 ;
+    END
+  END sclk
+  OBS
+      LAYER nwell ;
+        RECT 5.330 10.795 54.930 59.925 ;
+      LAYER li1 ;
+        RECT 5.520 10.795 54.740 59.925 ;
+      LAYER met1 ;
+        RECT 4.210 10.640 55.040 60.080 ;
+      LAYER met2 ;
+        RECT 4.230 67.050 38.450 67.330 ;
+        RECT 39.290 67.050 53.720 67.330 ;
+        RECT 4.230 4.280 53.720 67.050 ;
+        RECT 4.230 4.000 15.910 4.280 ;
+        RECT 16.750 4.000 19.130 4.280 ;
+        RECT 19.970 4.000 25.570 4.280 ;
+        RECT 26.410 4.000 28.790 4.280 ;
+        RECT 29.630 4.000 32.010 4.280 ;
+        RECT 32.850 4.000 35.230 4.280 ;
+        RECT 36.070 4.000 41.670 4.280 ;
+        RECT 42.510 4.000 53.720 4.280 ;
+      LAYER met3 ;
+        RECT 3.990 52.040 56.610 60.005 ;
+        RECT 4.400 50.640 56.610 52.040 ;
+        RECT 3.990 48.640 56.610 50.640 ;
+        RECT 4.400 47.240 56.210 48.640 ;
+        RECT 3.990 45.240 56.610 47.240 ;
+        RECT 3.990 43.840 56.210 45.240 ;
+        RECT 3.990 41.840 56.610 43.840 ;
+        RECT 4.400 40.440 56.610 41.840 ;
+        RECT 3.990 38.440 56.610 40.440 ;
+        RECT 4.400 37.040 56.610 38.440 ;
+        RECT 3.990 35.040 56.610 37.040 ;
+        RECT 4.400 33.640 56.610 35.040 ;
+        RECT 3.990 31.640 56.610 33.640 ;
+        RECT 4.400 30.240 56.610 31.640 ;
+        RECT 3.990 28.240 56.610 30.240 ;
+        RECT 4.400 26.840 56.610 28.240 ;
+        RECT 3.990 24.840 56.610 26.840 ;
+        RECT 4.400 23.440 56.210 24.840 ;
+        RECT 3.990 18.040 56.610 23.440 ;
+        RECT 3.990 16.640 56.210 18.040 ;
+        RECT 3.990 10.715 56.610 16.640 ;
+      LAYER met4 ;
+        RECT 28.815 34.175 29.145 48.105 ;
+  END
+END spi_slave3
+END LIBRARY
+

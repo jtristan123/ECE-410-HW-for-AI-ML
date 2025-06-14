@@ -1,0 +1,171 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1749864846
+<< nwell >>
+rect 1066 2159 10986 11985
+<< obsli1 >>
+rect 1104 2159 10948 11985
+<< obsm1 >>
+rect 842 2128 11008 12016
+<< metal2 >>
+rect 7746 13466 7802 14266
+rect 18 0 74 800
+rect 3238 0 3294 800
+rect 3882 0 3938 800
+rect 5170 0 5226 800
+rect 5814 0 5870 800
+rect 6458 0 6514 800
+rect 7102 0 7158 800
+rect 8390 0 8446 800
+<< obsm2 >>
+rect 846 13410 7690 13466
+rect 7858 13410 10744 13466
+rect 846 856 10744 13410
+rect 846 800 3182 856
+rect 3350 800 3826 856
+rect 3994 800 5114 856
+rect 5282 800 5758 856
+rect 5926 800 6402 856
+rect 6570 800 7046 856
+rect 7214 800 8334 856
+rect 8502 800 10744 856
+<< metal3 >>
+rect 0 10208 800 10328
+rect 0 9528 800 9648
+rect 11322 9528 12122 9648
+rect 11322 8848 12122 8968
+rect 0 8168 800 8288
+rect 0 7488 800 7608
+rect 0 6808 800 6928
+rect 0 6128 800 6248
+rect 0 5448 800 5568
+rect 0 4768 800 4888
+rect 11322 4768 12122 4888
+rect 11322 3408 12122 3528
+<< obsm3 >>
+rect 798 10408 11322 12001
+rect 880 10128 11322 10408
+rect 798 9728 11322 10128
+rect 880 9448 11242 9728
+rect 798 9048 11322 9448
+rect 798 8768 11242 9048
+rect 798 8368 11322 8768
+rect 880 8088 11322 8368
+rect 798 7688 11322 8088
+rect 880 7408 11322 7688
+rect 798 7008 11322 7408
+rect 880 6728 11322 7008
+rect 798 6328 11322 6728
+rect 880 6048 11322 6328
+rect 798 5648 11322 6048
+rect 880 5368 11322 5648
+rect 798 4968 11322 5368
+rect 880 4688 11242 4968
+rect 798 3608 11322 4688
+rect 798 3328 11242 3608
+rect 798 2143 11322 3328
+<< metal4 >>
+rect 2174 2128 2494 12016
+rect 2834 2128 3154 12016
+rect 4635 2128 4955 12016
+rect 5295 2128 5615 12016
+rect 7096 2128 7416 12016
+rect 7756 2128 8076 12016
+rect 9557 2128 9877 12016
+rect 10217 2128 10537 12016
+<< obsm4 >>
+rect 5763 6835 5829 9621
+<< metal5 >>
+rect 1056 11244 10996 11564
+rect 1056 10584 10996 10904
+rect 1056 8796 10996 9116
+rect 1056 8136 10996 8456
+rect 1056 6348 10996 6668
+rect 1056 5688 10996 6008
+rect 1056 3900 10996 4220
+rect 1056 3240 10996 3560
+<< labels >>
+rlabel metal4 s 2834 2128 3154 12016 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 5295 2128 5615 12016 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 7756 2128 8076 12016 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 10217 2128 10537 12016 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal5 s 1056 3900 10996 4220 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal5 s 1056 6348 10996 6668 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal5 s 1056 8796 10996 9116 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal5 s 1056 11244 10996 11564 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 2174 2128 2494 12016 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal4 s 4635 2128 4955 12016 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal4 s 7096 2128 7416 12016 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal4 s 9557 2128 9877 12016 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal5 s 1056 3240 10996 3560 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal5 s 1056 5688 10996 6008 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal5 s 1056 8136 10996 8456 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal5 s 1056 10584 10996 10904 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal3 s 0 9528 800 9648 6 clk
+port 3 nsew signal input
+rlabel metal2 s 7746 13466 7802 14266 6 cs
+port 4 nsew signal input
+rlabel metal3 s 0 5448 800 5568 6 lfsr_seed[0]
+port 5 nsew signal input
+rlabel metal2 s 6458 0 6514 800 6 lfsr_seed[10]
+port 6 nsew signal input
+rlabel metal3 s 0 6128 800 6248 6 lfsr_seed[11]
+port 7 nsew signal input
+rlabel metal3 s 0 6808 800 6928 6 lfsr_seed[12]
+port 8 nsew signal input
+rlabel metal3 s 0 7488 800 7608 6 lfsr_seed[13]
+port 9 nsew signal input
+rlabel metal3 s 0 8168 800 8288 6 lfsr_seed[14]
+port 10 nsew signal input
+rlabel metal3 s 0 10208 800 10328 6 lfsr_seed[15]
+port 11 nsew signal input
+rlabel metal3 s 0 4768 800 4888 6 lfsr_seed[1]
+port 12 nsew signal input
+rlabel metal2 s 3238 0 3294 800 6 lfsr_seed[2]
+port 13 nsew signal input
+rlabel metal2 s 3882 0 3938 800 6 lfsr_seed[3]
+port 14 nsew signal input
+rlabel metal2 s 5170 0 5226 800 6 lfsr_seed[4]
+port 15 nsew signal input
+rlabel metal2 s 5814 0 5870 800 6 lfsr_seed[5]
+port 16 nsew signal input
+rlabel metal2 s 7102 0 7158 800 6 lfsr_seed[6]
+port 17 nsew signal input
+rlabel metal2 s 8390 0 8446 800 6 lfsr_seed[7]
+port 18 nsew signal input
+rlabel metal3 s 11322 3408 12122 3528 6 lfsr_seed[8]
+port 19 nsew signal input
+rlabel metal3 s 11322 4768 12122 4888 6 lfsr_seed[9]
+port 20 nsew signal input
+rlabel metal3 s 11322 8848 12122 8968 6 miso
+port 21 nsew signal output
+rlabel metal2 s 18 0 74 800 6 mosi
+port 22 nsew signal input
+rlabel metal3 s 11322 9528 12122 9648 6 sclk
+port 23 nsew signal input
+<< properties >>
+string FIXED_BBOX 0 0 12122 14266
+string LEFclass BLOCK
+string LEFview TRUE
+string GDS_END 499532
+string GDS_FILE /openlane/designs/spi_lfsr/runs/RUN_2025.06.14_01.33.22/results/signoff/spi_slave3.magic.gds
+string GDS_START 164368
+<< end >>
+
